@@ -9,6 +9,16 @@ Studying for an exam is about gaining a level of familiarity with the material s
 - Be as active in your studying as possible. Working through problems and developing cheat sheets are "active". Simply rewatching lectures and rereading something you've read is not.
 - The often missing component: Reflect on your own problem-solving process. This is much easier through discussion with others, particularly other students.
 
+**Useful Excercises (PDFs)**
+- [Data Tutorial](./data-tutorial.pdf)
+  - [Solutions](./data-tutorial.pdf)
+- [C Tutorial](./c-tutorial.pdf)
+  - [Solutions](./c-tutorial-sol.pdf)
+- [Memory Tutorial](./tutorial-malloc.pdf)
+  - [Solutions](./tutorial-malloc-solutions.pdf)
+- [x86 Tutorial](./x86-homework.pdf)
+  - [Solutions](./x86-homework-solutions.pdf)
+
 ## Data Representation
 The first few weeks of the semester focused on how computers store and manipulate data. This may have been a review
 for some of you (especially if you’ve already taken CS 0447[^447]), or it may have been new material. Either way, you are
