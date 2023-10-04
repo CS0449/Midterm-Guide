@@ -153,8 +153,172 @@ class MarkdownStyle extends HTMLElement {
     }
 }
 customElements.define('markdown-style', MarkdownStyle);</script><markdown-style style="max-width: 960px; margin: 0 auto 60px auto; padding: 8px;" class="markdown-style">
-    <h1 id="cs0449-exam-i-study-guide"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cs0449-exam-i-study-guide"><span class="octicon octicon-link"></span></a>CS0449: Exam I Study Guide</h1>
-    <h2 id="introduction-to-system-software"><a class="anchor" aria-hidden="true" tabindex="-1" href="#introduction-to-system-software"><span class="octicon octicon-link"></span></a>Introduction to System Software</h2>
+    <h1 id="cs0449-exam-i-study-guide"><a class="anchor" aria-hidden="true" tabindex="-1" href="#cs0449-exam-i-study-guide"><span class="octicon octicon-link"></span></a>CS0449 Exam I Study Guide</h1>
+    <blockquote>
+      <p><strong>Prepared by <a href="https://sites.pitt.edu/~shk148/">Shinwoo Kim</a></strong></p>
+    </blockquote>
+    <p>Below is a <strong>non-exhaustive</strong> list of topics that <em>may</em> appear on the first exam. Note that topics not on this document may show up on the exam if it was discussed in lecture, recitation, or in an assignment. Conversely, the topics on this list are not guaranteed to be on the exam! This document purely serves to motivate students who "<em>do not even know where to begin</em>."</p>
+    <h2 id="overview"><a class="anchor" aria-hidden="true" tabindex="-1" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
+    <p>Studying for an exam is about gaining a level of familiarity with the material such that you can solve interesting problems that aren't just repetitions of things you've already seen. Some general tips:</p>
+    <ul>
+      <li>Start early and spread things out over time. Sleep does some sort of magic where things sink in better. More shorter study days is way preferably to a few short ones. One of the reasons we have assignments with deadlines is to exploit this fact.</li>
+      <li>Be as active in your studying as possible. Working through problems and developing cheat sheets are "active". Simply rewatching lectures and rereading something you've read is not.</li>
+      <li>The often missing component: Reflect on your own problem-solving process. This is much easier through discussion with others, particularly other students.</li>
+    </ul>
+    <h2 id="data-representation"><a class="anchor" aria-hidden="true" tabindex="-1" href="#data-representation"><span class="octicon octicon-link"></span></a>Data Representation</h2>
+    <p>
+      The first few weeks of the semester focused on how computers store and manipulate data. This may have been a review
+      for some of you (especially if you’ve already taken CS 0447<sup><a href="#user-content-fn-447" id="user-content-fnref-447" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup>), or it may have been new material. Either way, you are
+      expected to know the following:
+    </p>
+    <ul>
+      <li>Basics of <strong>Binary Representation</strong>
+        <ul>
+          <li>The difference between Base-2, Base-10, Base-16, and how to convert between each of them.</li>
+        </ul>
+      </li>
+      <li>Different ways that a computer represents data
+        <ul>
+          <li>The difference between signed and unsigned numbers</li>
+          <li>Two's complement and how to convert to decimal (and vice versa)</li>
+          <li>Types of integers and their quirks (including the effects of explicit/implicit casting)</li>
+          <li>Floating point numbers in C (including the effects of casting)</li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="c-programming"><a class="anchor" aria-hidden="true" tabindex="-1" href="#c-programming"><span class="octicon octicon-link"></span></a>C Programming</h2>
+    <p>The main programming lanuage of choice for this course is C. C is particularly useful in studying systems because it "<em>provides a nice abstract syntax (of a high-level programming language) while maintaining the direct access to memory (like assembly)</em>." For the purposes of the exam, you should be familiar with:</p>
+    <ul>
+      <li>Characteristics of C
+        <ul>
+          <li>What does it mean to be a compiled language?</li>
+          <li>How does C differ from languages such as Java or Python?</li>
+          <li>How does C allow us to directly control memory?</li>
+          <li>What is the C preprocessor?</li>
+        </ul>
+      </li>
+      <li>C programming (including reading and writing C code)
+        <ul>
+          <li>C syntax for functions, variables, operators, control flow, etc.</li>
+          <li>Scope and lifetime of variables</li>
+        </ul>
+      </li>
+      <li>Bitwise operations in C
+        <ul>
+          <li>AND, OR, XOR, Shifting (Logical/Arithmetic)</li>
+          <li>Bitwise operation vs Boolean operations</li>
+          <li>Extracting fields with shifting and masking</li>
+        </ul>
+      </li>
+      <li>Boolean operations in C
+        <ul>
+          <li>Boolean as integers</li>
+        </ul>
+      </li>
+      <li>Structs
+        <ul>
+          <li>What are they used for, and how we can create one</li>
+          <li>What is <code>typedef</code>?</li>
+          <li>What is <code>sizeof()</code>?</li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="c-memory-model"><a class="anchor" aria-hidden="true" tabindex="-1" href="#c-memory-model"><span class="octicon octicon-link"></span></a>C Memory Model</h2>
+    <p>A major focus of this course is on how memory works. Mainly, we look at different ways of managing memory (static vs dynamic), and peek inside some of the abstractions provided by the operating system. Studying memory is crucial as all the code you write is fetched from memory!</p>
+    <p>For the exam, you should know that:</p>
+    <ul>
+      <li>Memory is a continuous series of bits</li>
+      <li>The C Memory Model
+        <ul>
+          <li>The sections such as the stack, heap, static data, code</li>
+          <li>What each section is for. Given a peice of code, can you identify where that variable/code lives?</li>
+        </ul>
+      </li>
+      <li>Addressable Memory
+        <ul>
+          <li>What it means by "Byte-addressable"</li>
+          <li>Direct memory access through pointers</li>
+        </ul>
+      </li>
+      <li>Arrays and Pointers
+        <ul>
+          <li>What is an array? What's a pointer?</li>
+          <li>How they are the same, and how they are different?</li>
+          <li>Pointer arithmetic vs normal arithmetic</li>
+        </ul>
+      </li>
+      <li>C Strings
+        <ul>
+          <li>What is a string literal?</li>
+          <li>How are strings and arrays similar? How are they different
+            <ul>
+              <li><code>sizeof()</code> vs <code>strlen()</code></li>
+            </ul>
+          </li>
+          <li>What are some common string functions?</li>
+          <li>Null-terminator <code>\0</code></li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="inputoutput-in-c"><a class="anchor" aria-hidden="true" tabindex="-1" href="#inputoutput-in-c"><span class="octicon octicon-link"></span></a>Input/Output in C</h2>
+    <ul>
+      <li>How to read from and write to the terminal (<code>printf()</code>, <code>scanf()</code>)</li>
+      <li>How to read from command line arguments</li>
+      <li>How to read from and write to files
+        <ul>
+          <li>Common file functions: <code>fopen()</code>, <code>fseek()</code>, <code>fwrite()</code>, <code>fread()</code>, <code>fclose()</code></li>
+        </ul>
+      </li>
+      <li>How are files and pointers similar (parallels between disk and memory)?</li>
+    </ul>
+    <h2 id="memory-management"><a class="anchor" aria-hidden="true" tabindex="-1" href="#memory-management"><span class="octicon octicon-link"></span></a>Memory Management</h2>
+    <ul>
+      <li>What is dynamic memory allocation?
+        <ul>
+          <li>What do we mean by "dynamic"?</li>
+          <li>When should we use it? When should we not?</li>
+          <li>How do we use it? (Hint: <code>malloc()</code>)</li>
+        </ul>
+      </li>
+      <li>What is the heap?
+        <ul>
+          <li>How does <code>malloc()</code> work under the hood?</li>
+          <li>Implementation details of malloc (including how Linked Lists work)</li>
+          <li>Various search mechanisms for <code>malloc()</code> and their pros/cons.</li>
+          <li>Ways to optimize <code>malloc()</code></li>
+          <li>Tracing through <code>malloc()</code> given a memory diagram</li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="assembly-programming"><a class="anchor" aria-hidden="true" tabindex="-1" href="#assembly-programming"><span class="octicon octicon-link"></span></a>Assembly Programming</h2>
+    <ul>
+      <li>What is assembly?</li>
+      <li>How is x86-64 different from MIPS?
+        <ul>
+          <li>CISC vs RISC</li>
+        </ul>
+      </li>
+      <li>x86 basic syntax
+        <ul>
+          <li>Can you read &#x26; interpret x86 code?</li>
+          <li>Translating C to assembly (and vice versa)</li>
+        </ul>
+      </li>
+      <li>The C ABI
+        <ul>
+          <li>Registers in x86 and what each one is for</li>
+        </ul>
+      </li>
+    </ul>
+    <p><strong>Remember: Anything discussed in lecture/recitation/assignment is fair game for the exam!</strong></p>
+    <section data-footnotes="" class="footnotes">
+      <h2 class="sr-only" id="footnote-label"><a class="anchor" aria-hidden="true" tabindex="-1" href="#footnote-label"><span class="octicon octicon-link"></span></a>Footnotes</h2>
+      <ol>
+        <li id="user-content-fn-447">
+          <p>Computer Organization and Assembly <a href="#user-content-fnref-447" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+        </li>
+      </ol>
+    </section>
   <style>markdown-style pre .copied {
   display: flex;
   position: absolute;
