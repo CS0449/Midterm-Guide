@@ -1,7 +1,4 @@
 # CS0449 Exam I Study Guide
-
-> **Prepared by [Shinwoo Kim](https://sites.pitt.edu/~shk148/)**
-
 Below is a **non-exhaustive** list of topics that _may_ appear on the first exam. Note that topics not on this document may show up on the exam if it was discussed in lecture, recitation, or in an assignment. Conversely, the topics on this list are not guaranteed to be on the exam! This document purely serves to motivate students who "_do not even know where to begin_."
 
 ## Overview
@@ -106,5 +103,3 @@ For the exam, you should know that:
   - Registers in x86 and what each one is for
 
 **Remember: Anything discussed in lecture/recitation/assignment is fair game for the exam!**
-
-[^447]: Computer Organization and Assembly
